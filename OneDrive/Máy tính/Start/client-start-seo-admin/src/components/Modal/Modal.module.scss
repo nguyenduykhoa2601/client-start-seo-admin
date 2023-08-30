@@ -1,0 +1,51 @@
+.root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  z-index: 99999999;
+
+  .body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content {
+    min-width: 512px;
+    width: max-content;
+    min-height: 400px;
+    background-color: #fff;
+    position: relative;
+  }
+
+  .header {
+    width: 100%;
+    padding: 6px 12px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    background-image: linear-gradient(90deg, #1b75bb 11.9%, #4d9984 47.22%, #7ab952 82.55%, #8bc53f 100%);
+  }
+
+  .close {
+    margin-right: 10px;
+
+    svg {
+      fill: #fff;
+    }
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}

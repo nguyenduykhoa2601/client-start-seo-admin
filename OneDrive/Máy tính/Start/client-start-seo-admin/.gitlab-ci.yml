@@ -1,0 +1,36 @@
+## Templates ##
+include:
+  - remote: 'https://nexus.infra.zalo.services/repository/shared/so/gitlab-ci-templates/general/build-image-with-buildkit.yml'
+  - remote: 'https://nexus.infra.zalo.services/repository/shared/so/gitlab-ci-templates/general/k8s-deploy.yml'
+
+stages:
+  - build-image
+  - deploy
+
+## Global variales ##
+variables:
+  IMAGE_TAG_PREFIX: rnd
+  SERVICE_NAME: smon-dashboard
+  DOCKERFILE: 'Dockerfile'
+
+default:
+  tags:
+    - rnd-k8s-runner
+
+build:
+  extends: .build-image-with-buildkit-template
+  rules:
+    - if: $CI_COMMIT_BRANCH == "production"
+
+deploy:prod:
+  extends: .deploy-to-k8s-template
+  variables:
+    K8S_CLUSTER_NAME: zte
+    K8S_NAMESPACE: data-insights
+    ENVIRONMENT: production
+    SERVICE_PORT: 80
+    SERVICE_NAME: smon-dashboard
+    INGRESS: 'yes'
+  rules:
+    - if: $CI_COMMIT_BRANCH == "production"
+  # when: manual

@@ -1,0 +1,31 @@
+.root {
+  display: flex;
+  column-gap: 12px;
+  position: relative;
+
+  .menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 99;
+  }
+  .section {
+    padding: 12px;
+    margin-top: 80px;
+    margin-left: 300px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 60px;
+    z-index: 98;
+    background-image: linear-gradient(90deg, #1b75bb 11.9%, #4d9984 47.22%, #7ab952 82.55%, #8bc53f 100%);
+  }
+}

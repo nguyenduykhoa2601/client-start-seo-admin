@@ -1,0 +1,22 @@
+@import './mixins';
+@import './mediaquery';
+@import './variables';
+@import './extends';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  // font-family: 'Libre Franklin', sans-serif;
+  color: black;
+  background-color: $bg-color;
+  overflow-x: hidden;
+  height: max-content;
+}
+//reset all
+ul {
+  list-style: none;
+}

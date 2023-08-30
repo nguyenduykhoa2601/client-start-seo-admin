@@ -1,0 +1,15 @@
+.root {
+  width: 100%;
+  padding: 12px;
+  padding-top: 30px;
+
+  .blockInput {
+    display: flex;
+    width: 100%;
+    column-gap: 20px;
+
+    .formItem {
+      flex: 1;
+    }
+  }
+}

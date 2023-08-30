@@ -1,0 +1,31 @@
+.root {
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  width: 240px;
+  height: 80px;
+  background-color: white;
+  box-shadow: 0 0 3px white;
+  border-radius: 10px;
+
+  .number {
+    padding: 14px;
+    border-radius: 50%;
+    border-color: green;
+    color: green;
+    border: 1px solid;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
