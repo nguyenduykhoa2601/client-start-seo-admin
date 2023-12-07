@@ -7,7 +7,8 @@ import Homepage from './pages/Homepage/Homepage'
 import { doGetUserInfo } from './redux/actions/auth'
 import { RootState, useAppDispatch, useAppSelector } from './redux/store'
 import RequestPage from './pages/RequestPage/RequestPage'
-import OrderStatusPage from './pages/OrderStatusPage/OrderStatusPage'
+import ApprovalFlow from './pages/ApprovalFlow/ApprovalFlow'
+import CreateFlow from './pages/CreateFlow/CreateFlow'
 
 const App: FC = () => {
   const dispatch = useAppDispatch()
@@ -30,7 +31,8 @@ const App: FC = () => {
           <Route exact path={'/'} component={Homepage} />
           <Route exact path={'/login'} component={AuthPage} />
           <Route exact path={'/request'} component={RequestPage} />
-          <Route exact path={'/order-status'} component={OrderStatusPage} />
+          <Route exact path={'/approval-flow'} component={ApprovalFlow} />
+          <Route exact path={'/create-flow'} component={CreateFlow} />
         </Switch>
       </Router>
     </div>

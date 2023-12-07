@@ -1,0 +1,45 @@
+.root {
+  border-radius: 14px;
+  background: #fff;
+  padding: 30px 16px;
+  box-shadow: 0px 2.632px 2.632px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 20px;
+  max-width: 600px;
+  position: relative;
+  user-select: none;
+
+  .quotesAction {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    font-size: 32px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-6px);
+    transition: 0.2s;
+    opacity: 0.9;
+  }
+
+  .name {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .info {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    margin-top: 12px;
+
+    .tag {
+      border-radius: 3px;
+      border: 1.5px solid #d9d9d9;
+      padding: 2px 6px;
+      background: #fafafa;
+    }
+  }
+}

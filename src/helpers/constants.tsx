@@ -64,3 +64,21 @@ export const OPTIONS_CONFIG_LOGS_VERIFICATION = [
     label: 'Validity'
   }
 ]
+
+export const LIST_WORK_FLOW = [
+  {
+    name: 'Work_flow_1',
+    departments: ['IT', 'Bussiness'],
+    locations: ['HCM', 'HN']
+  },
+  {
+    name: 'Work_flow_1',
+    departments: ['IT', 'Bussiness'],
+    locations: ['HCM', 'HN']
+  },
+  {
+    name: 'Work_flow_1',
+    departments: ['IT', 'Bussiness'],
+    locations: ['HCM', 'HN']
+  }
+]

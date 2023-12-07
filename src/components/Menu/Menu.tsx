@@ -47,13 +47,13 @@ const Menu = () => {
         </li>
 
         <li
-          className={getClassActive('/order-status')}
+          className={getClassActive('/approval-flow')}
           onClick={() => {
-            history.push('/order-status')
+            history.push('/approval-flow')
           }}
         >
           <ApartmentOutlined className={styles.icon} />
-          Order Status
+          Approval Workflow
         </li>
       </ul>
     </div>

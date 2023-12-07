@@ -4,11 +4,14 @@
 import { useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { RootState, useAppSelector } from '../../redux/store'
-import styles from './OrderStatusPage.module.scss'
+import styles from './ApprovalFlow.module.scss'
 import withMainLayout from '../../HOC/MainLayout'
 import ModalLoading from '../../components/ModalLoading/ModalLoading'
 
-const OrderStatusPAge = () => {
+import { LIST_WORK_FLOW } from '../../helpers/constants'
+import ItemFlow from '../../modules/ApprovalFlow/ItemFlow/ItemFlow'
+
+const ApprovalFlow = () => {
   const { userInfo, isLoading } = useAppSelector((state: RootState) => state.auth)
   const history = useHistory()
 
@@ -21,9 +24,12 @@ const OrderStatusPAge = () => {
   return (
     <div className={styles.root}>
       {isLoading && <ModalLoading />}
-      Order
+
+      {LIST_WORK_FLOW.map((item) => {
+        return <ItemFlow item={item} key={item.name} />
+      })}
     </div>
   )
 }
 
-export default withMainLayout(OrderStatusPAge)
+export default withMainLayout(ApprovalFlow)
